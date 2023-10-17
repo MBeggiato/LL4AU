@@ -1,0 +1,339 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>traffic-lights.ico</ApplicationIcon>
+	  <Deterministic>false</Deterministic>
+	  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="com.plenom.BusylightSDK" Version="4.0.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="RestSharp" Version="110.2.1-alpha.0.10" />
+    <PackageReference Include="System.DirectoryServices.AccountManagement" Version="8.0.0-preview.6.23329.7" />
+    <PackageReference Include="Thrzn41.WebexTeams" Version="1.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wsertp.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\mediasession.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\MJPGDecoder.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\msvcp120.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\msvcr120.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\opencv_core2413.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\opencv_core320.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\opencv_highgui2413.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\opencv_imgproc2413.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\opencv_imgproc320.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\opencv_objdetect320.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\openh264.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\shareux.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\spark-windows-office-integration.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\ssleay32.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\tp.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\util.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wbxaecodec.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wbxaudioengine.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wbxtrace.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wme4net_40.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wmeclient.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wqos.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wrtp.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wseclient.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wsertp.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\mediasession.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\MJPGDecoder.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\msvcp120.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\msvcr120.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\opencv_core2413.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\opencv_core320.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\opencv_highgui2413.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\opencv_imgproc2413.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\opencv_imgproc320.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\opencv_objdetect320.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\openh264.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\shareux.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\spark-windows-office-integration.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\ssleay32.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\tp.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\util.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wbxaecodec.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wbxaudioengine.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wbxtrace.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wme4net_40.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wmeclient.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wqos.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wrtp.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wseclient.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\mediasession.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\MJPGDecoder.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\msvcp120.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\msvcr120.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\opencv_core2413.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\opencv_core320.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\opencv_highgui2413.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\opencv_imgproc2413.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\opencv_imgproc320.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\opencv_objdetect320.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\openh264.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\shareux.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\spark-windows-office-integration.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\ssleay32.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\tp.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\util.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wbxaecodec.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wbxaudioengine.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wbxtrace.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wme4net_40.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wmeclient.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wqos.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wrtp.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wseclient.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\beggiato\.nuget\packages\cisco.webex.windowssdk\2.0.0-eft04\build\\..\lib\native\wsertp.dll" />
+    <None Remove="traffic-lights.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="traffic-lights.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="traffic-lights.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\traffic-lights.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\traffic-lights.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
