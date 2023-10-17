@@ -14,22 +14,15 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 6.0.x
-      - name: get version
-        id: version
-        uses: notiz-dev/github-action-json-property@release
-        with: 
-          path: 'settings.json'
-          prop_path: 'Version'
-      - run: echo ${{steps.version.outputs.prop}} 
       - name: Build
         run: |
-          dotnet publish 'LL4AU.csproj' -r win-x64  -c Release -o "Build-${{steps.version.outputs.prop}}"
-          7z a -tzip "Build-${{steps.version.outputs.prop}}.zip" "./Build-${{steps.version.outputs.prop}}/*"
-          rm -r "Build-${{steps.version.outputs.prop}}"
+          dotnet publish 'LL4AU.csproj' -r win-x64  -c Release -o "Build"
+          7z a -tzip "Build-${{steps.version.outputs.prop}}.zip" "./Build/*"
+          rm -r "Build"
       - name: Publish
         uses: softprops/action-gh-release@v1
         with:
           files: "Build*"
-          tag_name: "${{steps.version.outputs.prop}}"
+          tag_name: "1.0.0"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
